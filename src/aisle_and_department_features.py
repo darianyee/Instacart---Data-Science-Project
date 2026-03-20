@@ -50,4 +50,8 @@ def get_aisle_department_features(prior_orders):
         
     )
 
+    aisle_department_features = aisle_department_features.drop(columns = ['order_id', 'reordered'])
+    aisle_department_features = aisle_department_features.drop_duplicates(subset=['user_id', 'product_id', 'aisle_id', 'department_id'])
+    
     return aisle_department_features
+    
