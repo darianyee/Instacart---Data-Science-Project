@@ -17,3 +17,7 @@ def threshold_optimized_f1(y_true, y_pred, threshold_list):
     return best_threshold
     
 
+def custom_f1_threshold(y_true, y_probs, threshold=0.5):
+    y_pred = (y_probs>threshold).astype(int)
+    return f1_score(y_true, y_pred)
+    
