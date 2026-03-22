@@ -147,3 +147,16 @@ def get_aisle_department_features(prior_orders):
     
     return aisle_department_features
     
+    
+def get_split_data(df, eval_set, order_products):
+    
+    model_x_data = df[df['eval_set']==eval_set]
+    model_x_data = model_x_data.merge(
+        order_products,
+        how='left',
+        on=['order_id', 'product_id']
+    )
+    
+    model_x_data['reordered'] = model_x_data['reordered'].fillna(0)
+    
+    return model_x_data
