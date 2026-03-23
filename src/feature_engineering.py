@@ -89,6 +89,20 @@ def get_user_product_features(prior_orders):
         how='left'
     ).fillna(0)
     
+    #3.3.6 User-Product Orders since last purchase
+    
+    user_max_order = prior_orders.groupby('user_id')['order_number'].max()
+    
+    user_product_features['up_orders_since_last_purchase'] = (
+        user_product_features['user_id'].map(user_max_order) - user_product_features['up_last_order']
+    )
+    
+    #3.3.7 User-Product User-Product Order Rate
+    user_product_features['up_order_rate'] = (
+        user_product_features['up_total_purchases'] / 
+        user_product_features['user_id'].map(user_max_order)
+    )
+    
     return user_product_features
 
 
@@ -151,6 +165,7 @@ def get_aisle_department_features(prior_orders):
 def get_split_data(df, eval_set, order_products):
     
     model_x_data = df[df['eval_set']==eval_set]
+    
     model_x_data = model_x_data.merge(
         order_products,
         how='left',
