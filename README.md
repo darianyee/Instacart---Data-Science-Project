@@ -15,11 +15,15 @@ The core challenge of this project is to model consumer behavior and shopping ri
 - F1-Score: Used to determine the final classification threshold, balancing the trade-off between Precision and Recall.
 
 Model Benchmarks
-  Model                Train PR-AUC   Validation PR-AUC    ValidationF1
-  XGBoost                   0.432          0.426                0.442
-  LightGBM                  0.429          0.425                0.442
-  CatBoost                  0.423          0.420                0.439
-  Logistic Regression       0.404          0.403                0.424
+  XGBoost
+  Train PR-AUC:              0.432
+  Validation PR-AUC:         0.426
+  Validation F1:             0.442
+
+  LightGBM
+  Train PR-AUC:              0.429
+  Validation PR-AUC:         0.425  
+  Validation F1:             0.442
 
 🛠️ Feature Engineering
 
