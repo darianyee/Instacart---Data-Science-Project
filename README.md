@@ -38,4 +38,4 @@ Our analysis revealed that the most influential features are:
   
 Opted against an ensemble of trees, as the high correlation between GBDT models offered diminishing returns compared to the memory overhead required.
 
-📁 Repository Structuredata/: (Not included due to size) Kaggle source files.notebooks/: Exploratory Data Analysis (EDA) and Model Training.src/: Python scripts for feature engineering and downcasting.models/: Saved model weights and evaluation plots.
+📁 Repository Structure data: (Not included due to size) Kaggle source files.notebooks/: Exploratory Data Analysis (EDA) and Model Training.src/: Python scripts for feature engineering and downcasting.models/: Saved model weights and evaluation plots.
