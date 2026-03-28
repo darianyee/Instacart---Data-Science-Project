@@ -17,14 +17,14 @@ The core challenge of this project is to model consumer behavior and shopping ri
 Model Benchmarks
 <pre>
   XGBoost
-  Train PR-AUC:              0.451
-  Validation PR-AUC:         0.427
-  Test PR-AUC:               0.434
+  Train PR-AUC:              0.450
+  Validation PR-AUC:         0.428
+  Test PR-AUC:               0.435
 
   LightGBM
-  Train PR-AUC:              0.435
-  Validation PR-AUC:         0.427  
-  Test PR-AUC:               0.434
+  Train PR-AUC:              0.440
+  Validation PR-AUC:         0.428  
+  Test PR-AUC:               0.435
 </pre>
 
 🛠️ Feature Engineering
